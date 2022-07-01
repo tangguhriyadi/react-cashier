@@ -1,12 +1,25 @@
 //import React from 'react';
-import NavbarComp from './components/navbar'
+import { ResultComp, CategoryComp, NavbarComp } from './components';
+import {Col, Row, Container} from 'react-bootstrap'
+
 
 
 function App() {
   return (
     <div className="App">
      <NavbarComp />
-     <h2>Halo !</h2>
+     <div className="mt-3">
+      <Container fluid>
+      <Row >
+        <CategoryComp />
+        <Col>
+          <h4><strong>Product List</strong></h4>
+          <hr />
+        </Col>
+        <ResultComp />
+     </Row>
+      </Container>
+     </div>
     </div>
   );
 }
