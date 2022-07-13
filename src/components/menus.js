@@ -3,11 +3,11 @@ import {Col, Card} from 'react-bootstrap'
 import './menus.css'
 import { numberWithCommas } from '../utils/utils'
 
-const MenusComp = ({menu}) => {
+const MenusComp = ({menu, toChart}) => {
   return (
     
     <Col md={4} xs={6} className="kartu mb-4">
-    <Card style={{ width: '15rem', height:"20rem" }}>
+    <Card style={{ width: '15rem', height:"20rem" }} onClick={()=>toChart(menu)}>
       <Card.Img className="gmb shadow" variant="top" src={"assets/images/"+menu.category.nama.toLowerCase()+"/"+menu.gambar} />
       <Card.Body>
         <Card.Title>{menu.name} ({menu.code})</Card.Title>
